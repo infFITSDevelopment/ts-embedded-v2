@@ -383,6 +383,37 @@
             scopedCSS;
         });
     });
+
+    $(document).on("click", ".embeddedItem", function () {
+      const title = $(this).data("title"); // 取得 data-title 屬性
+      const link = $(this).data("link"); // 取得 data-link 屬性
+
+      // 觸發 Google Analytics 的事件追蹤
+      gtag("event", "click_embedded_item", {
+        send_to: "G-PQQRC09ZPS",
+        event_category: "embedded",
+        event_label: title,
+        event_value: link,
+      });
+    });
+    $(document).on("click", ".a-left", function () {
+      // 觸發 Google Analytics 的事件追蹤
+      gtag("event", "click_embedded_item", {
+        send_to: "G-PQQRC09ZPS",
+        event_category: "embedded",
+        event_label: 'arrow-left',
+        event_value: 'left',
+      });
+    });
+    $(document).on("click", ".a-right", function () {
+      // 觸發 Google Analytics 的事件追蹤
+      gtag("event", "click_embedded_item", {
+        send_to: "G-PQQRC09ZPS",
+        event_category: "embedded",
+        event_label: 'arrow-right',
+        event_value: 'right',
+      });
+    });
     $(window).on("scroll", function () {
        if ($('.embeddedAdImgContainer').hasClass('slick-initialized')) {
           $(".embeddedAdImgContainer").slick("slickPlay"); // 重新啟動自動播放
@@ -431,7 +462,7 @@
         .map(
           (img) =>
             `
-        <a class="embeddedItem slickSlide" href="${img.link})" target="_blank">
+        <a class="embeddedItem slickSlide" href="${img.link}" target="_blank" data-title="${img.title}" data-link="${img.link}">
             <div class="embeddedItem__img">
             <div class="embeddedItem__imgBox" style="background-color:#efefef;">
                 <img src="${img.image_link}" alt="${
