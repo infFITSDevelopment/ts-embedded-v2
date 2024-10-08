@@ -135,6 +135,11 @@
     overflow: visible;
   }
 }
+    .embeddedAdContainer .embeddedAdImgContainer .slick-slide,
+  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-track,
+  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-list {
+     will-change: transform;
+  }
 @media (min-width: 768px) {
   .embeddedAdContainer .embeddedAdImgContainer .slick-prev,
   .embeddedAdContainer .embeddedAdImgContainer .slick-next {
@@ -558,7 +563,6 @@
               arrows: false,
               dots: false,
               useCSS: false,
-              easing: "ease",
               // useTransform: false,
               touchThreshold: 1000,
               speed: 240,
