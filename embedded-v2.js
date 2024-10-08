@@ -135,6 +135,10 @@
     overflow: visible;
   }
 }
+  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-track,
+  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-list {
+     will-change: transform;
+  }
 @media (min-width: 768px) {
   .embeddedAdContainer .embeddedAdImgContainer .slick-prev,
   .embeddedAdContainer .embeddedAdImgContainer .slick-next {
@@ -363,9 +367,9 @@
 }
   `;
     document.head.appendChild(customCSS);
-    $('body').css('display', 'none');
-    $('body').offset(); // 觸發重排
-    $('body').css('display', '');
+    $("body").css("display", "none");
+    $("body").offset(); // 觸發重排
+    $("body").css("display", "");
 
     $(function () {
       console.log("DOM is ready");
@@ -462,12 +466,12 @@
           });
           if (window.innerWidth > 992) {
             if (jsonData.length >= 6) {
-              $('.embeddedAdContainer').show()
+              $(".embeddedAdContainer").show();
               updatePopAd(jsonData);
             }
-          }else{
+          } else {
             if (jsonData.length >= 4) {
-              $('.embeddedAdContainer').show()
+              $(".embeddedAdContainer").show();
               updatePopAd(jsonData);
             }
           }
@@ -559,10 +563,10 @@
               arrows: false,
               dots: false,
               useCSS: false,
-              easing: 'ease',
+              easing: "ease",
               // useTransform: false,
               touchThreshold: 1000,
-              speed: 240,
+              speed: 220,
             },
           },
           {
