@@ -135,10 +135,6 @@
     overflow: visible;
   }
 }
-  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-track,
-  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-list {
-     will-change: transform;
-  }
 @media (min-width: 768px) {
   .embeddedAdContainer .embeddedAdImgContainer .slick-prev,
   .embeddedAdContainer .embeddedAdImgContainer .slick-next {
@@ -157,7 +153,6 @@
     perspective: 1000;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-     will-change: transform;
   }
   .embeddedAdContainer .embeddedAdImgContainer .slick-prev:before,
   .embeddedAdContainer .embeddedAdImgContainer .slick-prev {
