@@ -133,6 +133,20 @@
     overflow: visible;
   }
 }
+    .embeddedAdContainer .embeddedAdImgContainer .slick-slide,
+  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-track,
+  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+     will-change: transform;
+  }
 @media (min-width: 768px) {
   .embeddedAdContainer .embeddedAdImgContainer .slick-prev,
   .embeddedAdContainer .embeddedAdImgContainer .slick-next {
@@ -148,19 +162,6 @@
   .embeddedAdContainer .embeddedAdImgContainer .slick-next {
     top: 45%;
     right: -32px;
-  }
-  .embeddedAdContainer .embeddedAdImgContainer .slick-slide,
-  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-track,
-  .embeddedAdContainer .embeddedAdImgContainer .slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-perspective: 1000;
-    -ms-perspective: 1000;
-    perspective: 1000;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
   }
 }
 .embeddedAdContainer .embeddedAdImgContainer .slick-slider {
@@ -552,9 +553,10 @@
               pauseOnHover: false,
               arrows: false,
               dots: false,
-              useCSS: true,
+              useCSS: false,
               // useTransform: false,
               touchThreshold: 1000,
+              speed: 280,
             },
           },
           {
