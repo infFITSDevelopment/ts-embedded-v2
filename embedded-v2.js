@@ -563,6 +563,7 @@
               arrows: false,
               dots: false,
               useCSS: false,
+              easing: 'swing',
               // useTransform: false,
               touchThreshold: 1000,
               speed: 240,
