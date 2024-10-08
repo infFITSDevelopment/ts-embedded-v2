@@ -559,9 +559,10 @@
               arrows: false,
               dots: false,
               useCSS: false,
+              easing: 'ease-in-out',
               // useTransform: false,
               touchThreshold: 1000,
-              speed: 260,
+              speed: 250,
             },
           },
           {
