@@ -556,7 +556,7 @@
               useCSS: false,
               // useTransform: false,
               touchThreshold: 1000,
-              speed: 280,
+              speed: 290,
             },
           },
           {
