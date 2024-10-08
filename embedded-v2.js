@@ -553,7 +553,7 @@
               arrows: false,
               dots: false,
               useCSS: true,
-              useTransform: false,
+              // useTransform: false,
               touchThreshold: 1000,
             },
           },
