@@ -38,9 +38,11 @@
   --inf-embedded-ad-font-12: 12px;
   --inf-embedded-ad-font-13: 13px;
   --inf-embedded-ad-font-14: 14px;
+  --inf-embedded-ad-font-15: 15px;
   --inf-embedded-ad-font-16: 16px;
   --inf-embedded-ad-font-18: 18px;
   --inf-embedded-ad-font-21: 21px;
+  --inf-embedded-ad-font-custom: 15px;
   --inf-embedded-ad-radius-8: 8px;
   --inf-embedded-ad-dark-yellow: rgba(59, 59, 50, 1);
   --inf-embedded-ad-dark-gray: #3B3B32;
@@ -291,7 +293,8 @@
 @media (min-width: 768px) {
   .embeddedAdContainer .embeddedAdImgContainer .embeddedItem .embeddedItemInfo .embeddedItemInfo__title {
     font-family: "Chocolate Classical Sans", "Figtree", sans-serif;
-    font-size: var(--inf-embedded-ad-font-18);
+    // font-size: var(--inf-embedded-ad-font-18);
+    font-size: var(--inf-embedded-ad-font-custom);
     font-style: normal;
     line-height: 23px;
     /* 127.778% */
@@ -312,7 +315,8 @@
     color: #3B3B32;
     text-align: center;
     font-family: "Figtree", sans-serif;
-    font-size: 18px;
+    // font-size: var(--inf-embedded-ad-font-18);
+    font-size: var(--inf-embedded-ad-font-custom);
     font-style: normal;
     font-weight: 500;
     line-height: 23px;
@@ -338,7 +342,8 @@
 }
 @media (min-width: 768px) {
   .embeddedAdContainer .embeddedAdImgContainer .embeddedItem .embeddedItemInfo .embeddedItemInfo__content .embeddedItemInfo__price {
-    font-size: var(--inf-embedded-ad-font-18);
+    // font-size: var(--inf-embedded-ad-font-18);
+    font-size: var(--inf-embedded-ad-font-custom);
     line-height: 23px;
     /* 127.778% */
   }
@@ -556,7 +561,7 @@
               useCSS: false,
               // useTransform: false,
               touchThreshold: 1000,
-              speed: 280,
+              speed: 270,
             },
           },
           {
