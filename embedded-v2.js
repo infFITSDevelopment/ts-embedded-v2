@@ -52,6 +52,7 @@
   padding: 24px;
   margin: 0 auto;
   width: 100%;
+  display: none;
 }
 @media (min-width: 768px) {
   .embeddedAdContainer {
@@ -356,6 +357,9 @@
 }
   `;
     document.head.appendChild(customCSS);
+    $('body').css('display', 'none');
+    $('body').offset(); // 觸發重排
+    $('body').css('display', '');
 
     $(function () {
       console.log("DOM is ready");
@@ -401,8 +405,8 @@
       gtag("event", "click_embedded_item", {
         send_to: "G-PQQRC09ZPS",
         event_category: "embedded",
-        event_label: 'arrow-left',
-        event_value: 'left',
+        event_label: "arrow-left",
+        event_value: "left",
       });
     });
     $(document).on("click", ".a-right", function () {
@@ -410,14 +414,14 @@
       gtag("event", "click_embedded_item", {
         send_to: "G-PQQRC09ZPS",
         event_category: "embedded",
-        event_label: 'arrow-right',
-        event_value: 'right',
+        event_label: "arrow-right",
+        event_value: "right",
       });
     });
     $(window).on("scroll", function () {
-       if ($('.embeddedAdImgContainer').hasClass('slick-initialized')) {
-          $(".embeddedAdImgContainer").slick("slickPlay"); // 重新啟動自動播放
-       }
+      if ($(".embeddedAdImgContainer").hasClass("slick-initialized")) {
+        $(".embeddedAdImgContainer").slick("slickPlay"); // 重新啟動自動播放
+      }
     });
     const getEmbeddedAds = () => {
       const requestData = {
@@ -450,7 +454,17 @@
             ).toLocaleString();
             return newItem;
           });
-          updatePopAd(jsonData);
+          if (window.innerWidth > 992) {
+            if (jsonData.length >= 6) {
+              $('.embeddedAdContainer').show()
+              updatePopAd(jsonData);
+            }
+          }else{
+            if (jsonData.length >= 4) {
+              $('.embeddedAdContainer').show()
+              updatePopAd(jsonData);
+            }
+          }
         })
         .catch((err) => {
           console.error(err);
@@ -462,7 +476,9 @@
         .map(
           (img) =>
             `
-        <a class="embeddedItem slickSlide" href="${img.link}" target="_blank" data-title="${img.title}" data-link="${img.link}">
+        <a class="embeddedItem slickSlide" href="${
+          img.link
+        }" target="_blank" data-title="${img.title}" data-link="${img.link}">
             <div class="embeddedItem__img">
             <div class="embeddedItem__imgBox" style="background-color:#efefef;">
                 <img src="${img.image_link}" alt="${
