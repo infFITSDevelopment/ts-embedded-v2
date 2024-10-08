@@ -561,7 +561,7 @@
               easing: "ease",
               // useTransform: false,
               touchThreshold: 1000,
-              speed: 220,
+              speed: 240,
             },
           },
           {
