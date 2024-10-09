@@ -438,7 +438,7 @@
         Brand: "PME",
         LGVID: "2Zdl1XTfRX3FdvPqGEhs",
         MRID: "",
-        recom_num: "12",
+        recom_num: "3",
       };
       const options = {
         method: "POST",
