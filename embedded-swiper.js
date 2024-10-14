@@ -48,7 +48,7 @@
   --inf-embedded-ad-dark-gray: #3B3B32;
   --inf-embedded-ad-dark-red: #EB7454;
   --inf-embedded-ad-light-gray: rgba(59, 59, 50, 0.30);
-  --swiper-wrapper-transition-timing-function: linear !important;
+  --swiper-wrapper-transition-timing-function: liner !important;
 }
 
 .embeddedAdContainer {
@@ -395,6 +395,13 @@
     line-height: 17px;
   }
 }
+ .embeddedAdContainer .swiper-slide{
+-webkit-backface-visibility: hide;
+-webkit-transform：translate3d(0,0,0)；
+}
+.embeddedAdContainer .swiper-wrapper{
+-webkit-transform-style:preserve-3d;
+}
   `;
     document.head.appendChild(customCSS);
 
@@ -567,7 +574,7 @@
         direction: "horizontal",
         loop: true,
         autoplay: {
-          delay: 3500
+          delay:3500
         },
         navigation: {
           nextEl: ".swiper-next",
