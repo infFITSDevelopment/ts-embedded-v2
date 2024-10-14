@@ -600,6 +600,7 @@
             slidesPerGroup: 2,
             loopFillGroupWithBlank: true,
             spaceBetween: 8,
+            speed: 300,
             grid: {
               rows: 2,
             },
