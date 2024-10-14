@@ -48,7 +48,6 @@
   --inf-embedded-ad-dark-gray: #3B3B32;
   --inf-embedded-ad-dark-red: #EB7454;
   --inf-embedded-ad-light-gray: rgba(59, 59, 50, 0.30);
-  --swiper-wrapper-transition-timing-function: linear !important;
 }
 
 .embeddedAdContainer {
