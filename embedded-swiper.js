@@ -600,6 +600,8 @@
             loopFillGroupWithBlank: true,
             spaceBetween: 8,
             speed: 300,
+            threshold: 10,
+            resistanceRatio: 0,
             grid: {
               rows: 2,
             },
